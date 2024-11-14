@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main  # O workflow será executado sempre que houver um push na branch "main"
+  schedule:
+    - cron: '0 2 * * *'  # Executa o workflow diariamente às 2h da manhã UTC
 
 jobs:
   packer-build:
